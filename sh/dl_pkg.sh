@@ -10,10 +10,7 @@ then
     echo "Try download $1"
     if [ $# -eq 1 ]
     then
-        mkdir dl_pkg_$1
-        cd dl_pkg_$1
         apt-get download $(apt-rdepends $1 | grep -v ^\ )
-        cd ..
     elif [ $# -eq 2 ]
     then
         # download and pack into one file
