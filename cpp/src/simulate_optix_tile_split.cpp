@@ -170,8 +170,8 @@ int simulate_optix_tile_split()
 {
     std::vector<int> videoBuffer;
 
-    sysData.tileShift = int2(2, 2);
-    sysData.tileSize = int2(4, 4);
+    sysData.tileShift = int2(2, 1);
+    sysData.tileSize = int2(4, 2);
     sysData.deviceCount = 3;
 
     CompositorData compData;
