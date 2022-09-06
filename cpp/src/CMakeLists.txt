@@ -12,6 +12,9 @@ find_package(Boost 1.66.0 COMPONENTS python3 numpy3 filesystem)
 find_package(PythonLibs REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(OpenGL REQUIRED)
+find_package(GLEW REQUIRED)
+find_package(glfw3 REQUIRED)
+find_package(GLUT REQUIRED)
 
 include(FindOpenMP)
 if(OPENMP_FOUND)
@@ -30,4 +33,4 @@ file(GLOB srcs "*.h" "*.cpp")
 
 add_executable(test ${srcs})
 target_link_libraries(test ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES} ${Boost_LIBRARIES} 
-	${PYTHON_LIBRARIES} /usr/lib/x86_64-linux-gnu/libtinyxml.a)
+	${PYTHON_LIBRARIES} ${GLEW_LIBRARIES} glfw)
