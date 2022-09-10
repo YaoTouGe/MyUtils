@@ -1,0 +1,1 @@
+adb reverse tcp:28252 tcp:28252
