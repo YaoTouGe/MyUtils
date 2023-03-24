@@ -17,3 +17,4 @@ endif(NOT CMAKE_BUILD_TYPE)
 
 add_subdirectory( py )
 add_subdirectory( src )
+add_subdirectory( test-multiprocess)
